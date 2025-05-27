@@ -24,10 +24,10 @@ import {
   getParentsandCategories,
   getSingleProductById,
 } from "@/lib/database/actions/vendor/products/products.actions";
-import { getSubCategoriesByCategoryParent } from "@/lib/database/actions/vendor/subCategories/subcategories.actions";
 import { getVendorCookiesandFetchVendor } from "@/lib/database/actions/vendor/vendor.actions";
 import { MdDelete } from "react-icons/md";
 import { IoAdd } from "react-icons/io5";
+import { getSubCategoriesByCategoryParent } from "@/lib/database/actions/vendor/subcategories/subcategories.actions";
 
 interface FormValues {
   name: string;
@@ -341,7 +341,7 @@ const CreateProductPage = () => {
     };
 
     fetchParentData();
-  }, [form.values.parent]);
+  }, [form, form.values.parent]);
   return (
     <div>
       <div className="titleStyle">Create a Product</div>

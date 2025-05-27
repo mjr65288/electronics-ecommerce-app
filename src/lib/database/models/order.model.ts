@@ -128,7 +128,8 @@ const orderSchema = new mongoose.Schema(
     },
     {
         timestamps: true,
-    }
+        suppressReservedKeysWarning: true,
+    },
 );
 const Order = mongoose.models.Order || mongoose.model("Order", orderSchema);
 export default Order;

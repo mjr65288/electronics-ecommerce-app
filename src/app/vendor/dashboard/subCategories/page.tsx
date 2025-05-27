@@ -2,7 +2,7 @@
 
 import CreateSubCategory from "@/components/vendor/dashboard/sub-categories/create";
 import ListAllSubCategories from "@/components/vendor/dashboard/sub-categories/list";
-import { getAllSubCategoriesandCategories } from "@/lib/database/actions/vendor/subCategories/subcategories.actions";
+import { getAllSubCategoriesandCategories } from "@/lib/database/actions/vendor/subcategories/subcategories.actions";
 import { useEffect, useState } from "react";
 
 import React from "react";

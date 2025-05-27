@@ -4,10 +4,8 @@ import { AiFillDelete, AiTwotoneEdit } from "react-icons/ai";
 import { modals } from "@mantine/modals";
 
 import { useRouter } from "next/navigation";
-import {
-  deleteSubCategory,
-  updateSubCategory,
-} from "@/lib/database/actions/vendor/subCategories/subcategories.actions";
+import { deleteSubCategory, updateSubCategory } from "@/lib/database/actions/vendor/subcategories/subcategories.actions";
+
 
 const SubCategoryListItem = ({
   subCategory,

@@ -13,6 +13,7 @@ import {
   Select,
 } from "@mantine/core";
 import { useForm } from "@mantine/form";
+import { createSubCategory } from "@/lib/database/actions/vendor/subcategories/subcategories.actions";
 
 const fletobase64 = (file: File): Promise<string> =>
   new Promise((resolve, reject) => {
@@ -21,7 +22,6 @@ const fletobase64 = (file: File): Promise<string> =>
     reader.onload = () => resolve(reader.result as string);
     reader.onerror = (error) => reject(error);
   });
-import { createSubCategory } from "@/lib/database/actions/vendor/subCategories/subcategories.actions";
 
 const CreateSubCategory = ({
   setSubCategories,
@@ -38,7 +38,7 @@ const CreateSubCategory = ({
       parent: "",
     },
     validate: {
-      name: (value) =>
+      name: (value: string) =>
         value.length < 3 || value.length > 30
           ? "Category name must be between 3 to 30 characters."
           : null,
